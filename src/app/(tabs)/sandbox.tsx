@@ -1,18 +1,17 @@
-import { StyleSheet } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/src/components/EditScreenInfo";
 import { Text, View } from "@/src/components/Themed";
+import CreateDatabase from "@/src/services/CreateDatabase";
 
-export default function TabTwoScreen() {
+export default function Sandbox() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <CreateDatabase />
+      <Text style={styles.title}>SANDBOX</Text>
+      <Pressable onPress={() => console.log("Pressed")}>
+        <Text style={styles.title}>BUTTON</Text>
+      </Pressable>
     </View>
   );
 }
@@ -24,6 +23,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
+    padding: 20,
     fontSize: 20,
     fontWeight: "bold",
   },

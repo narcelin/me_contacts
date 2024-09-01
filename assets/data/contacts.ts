@@ -1,23 +1,135 @@
 const contacts = [
     {
-        id: 1,
-        name: 'Nicolas Arcelin',
-        image:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
-        phone: "(555) - 555 - 5555"
-    }, {
-        id: 2,
-        name: 'John Doe',
-        image:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
-        phone: "(444) - 444 - 4444"
-    }, {
-        id: 3,
-        name: 'Anees The Rapper',
-        image:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
-        phone: "(333) - 333 - 3333"
+        uid: 1,
+        firstName: "Alice",
+        middleName: "M.",
+        lastName: "Smith",
+        streetAddress: "123 Maple St",
+        city: "Springfield",
+        state: "Illinois",
+        zip: 62704,
+        notes: "Met at the conference.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/1burger.png',
+        phone: "(555) - 123 - 4567"
     },
-]
+    {
+        uid: 2,
+        firstName: "Bob",
+        middleName: "L.",
+        lastName: "Johnson",
+        streetAddress: "456 Oak St",
+        city: "Hometown",
+        state: "California",
+        zip: 90210,
+        notes: "Old friend from school.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/2pizza.png',
+        phone: "(555) - 234 - 5678"
+    },
+    {
+        uid: 3,
+        firstName: "Carol",
+        middleName: "A.",
+        lastName: "Davis",
+        streetAddress: "789 Pine St",
+        city: "Somewhere",
+        state: "Texas",
+        zip: 73301,
+        notes: "Works at the library.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/3sushi.png',
+        phone: "(555) - 345 - 6789"
+    },
+    {
+        uid: 4,
+        firstName: "David",
+        middleName: "B.",
+        lastName: "Miller",
+        streetAddress: "101 Cedar St",
+        city: "Anytown",
+        state: "New York",
+        zip: 10001,
+        notes: "Neighbor.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/4tacos.png',
+        phone: "(555) - 456 - 7890"
+    },
+    {
+        uid: 5,
+        firstName: "Eve",
+        middleName: "C.",
+        lastName: "Wilson",
+        streetAddress: "202 Birch St",
+        city: "Metropolis",
+        state: "Illinois",
+        zip: 62960,
+        notes: "Co-worker.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/5salad.png',
+        phone: "(555) - 567 - 8901"
+    },
+    {
+        uid: 6,
+        firstName: "Frank",
+        middleName: "D.",
+        lastName: "Moore",
+        streetAddress: "303 Elm St",
+        city: "Smallville",
+        state: "Kansas",
+        zip: 67524,
+        notes: "Gym buddy.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
+        phone: "(555) - 678 - 9012"
+    },
+    {
+        uid: 7,
+        firstName: "Grace",
+        middleName: "E.",
+        lastName: "Taylor",
+        streetAddress: "404 Spruce St",
+        city: "Capitol City",
+        state: "District of Columbia",
+        zip: 20001,
+        notes: "Cousin.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/7noodles.png',
+        phone: "(555) - 789 - 0123"
+    },
+    {
+        uid: 8,
+        firstName: "Henry",
+        middleName: "F.",
+        lastName: "Anderson",
+        streetAddress: "505 Fir St",
+        city: "Oceanside",
+        state: "California",
+        zip: 92054,
+        notes: "Surfing buddy.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/8pancake.png',
+        phone: "(555) - 890 - 1234"
+    },
+    {
+        uid: 9,
+        firstName: "Ivy",
+        middleName: "G.",
+        lastName: "Thomas",
+        streetAddress: "606 Willow St",
+        city: "Mountain View",
+        state: "California",
+        zip: 94035,
+        notes: "Tech meetup contact.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/9donut.png',
+        phone: "(555) - 901 - 2345"
+    },
+    {
+        uid: 10,
+        firstName: "Jack",
+        middleName: "H.",
+        lastName: "Jackson",
+        streetAddress: "707 Aspen St",
+        city: "Bayside",
+        state: "New York",
+        zip: 11361,
+        notes: "Friend from college.",
+        image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/10icecream.png',
+        phone: "(555) - 012 - 3456"
+    }
+];
+
 
 export default contacts;

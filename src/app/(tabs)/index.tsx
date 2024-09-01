@@ -1,23 +1,62 @@
-import { StyleSheet, Image } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
+
 // import { Text, View } from "react-native"; //Using themed componenet for dark mode
+import { Text, View } from "@/src/components/Themed";
 
 import EditScreenInfo from "@/src/components/EditScreenInfo";
-import { Text, View } from "@/src/components/Themed";
 import Colors from "@/src/constants/Colors";
+import ContactList from "@/src/components/ContactList";
 
 import products from "@/assets/data/products";
 import contacts from "@/assets/data/contacts";
+import { useState } from "react";
 
-const product = products[0];
-const contact = contacts[0];
+import Contacts from "@/src/components/clonedComponents/Contacts";
+import MyContactCard from "@/src/components/MyContactCard";
+import HorizontalLine from "@/src/components/HorizontalLine";
+import SearchBar from "@/src/components/SearchBar";
+import { Link } from "expo-router";
+import { FontAwesome } from "@expo/vector-icons";
 
 export default function TabOneScreen() {
+  const [modalVisible, setModalVisible] = useState(true);
+  const [searchText, setSearchText] = useState("");
+
+  const myCard = {
+    name: "John Doe",
+    jobTitle: "Software Engineer",
+    phoneNumbers: ["+123 456 7890", "+098 765 4321"],
+    email: "john.doe@example.com",
+    profilePic: "https://example.com/profile-pic.jpg",
+  };
+
   return (
+    // <Contacts />
     <View style={styles.container}>
-      <Text>Hello, World!</Text>
-      <Image source={{ uri: contact.image }} style={styles.image}></Image>
-      <Text style={styles.title}>{contact.name}</Text>
-      <Text style={styles.price}>{contact.phone}</Text>
+      <SearchBar
+        value={searchText}
+        onChangeText={setSearchText}
+        placeholder="Search Contacts"
+      />
+      <Link
+        href={{
+          pathname: "/contactCardModal",
+          params: { data: JSON.stringify(myCard) },
+        }}
+        asChild
+      >
+        <Pressable>
+          <MyContactCard
+            name={myCard.name}
+            jobTitle={myCard.jobTitle}
+            phoneNumbers={myCard.phoneNumbers}
+            email={myCard.email}
+            profilePic={myCard.profilePic}
+          />
+        </Pressable>
+      </Link>
+      <HorizontalLine />
+      <ContactList />
     </View>
   );
 }
